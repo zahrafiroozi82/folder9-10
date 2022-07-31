@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>mini-project></title>
+    <link rel="stylesheet" href="./mini.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Add smooth scrolling to all links
+        $("a").on("click", function (event) {
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top,
+              },
+              800,
+              function () {
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              }
+            );
+          } // End if
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <section id="page1">
+      <h1>welcom to my presentation</h1>
+      <br />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+        possimus in sequi recusandae mollitia deleniti, commodi doloremque,
+        quidem incidunt natus aliquam minima qui nihil laborum alias,
+        accusantium id quos aspernatur.
+      </p>
+      <br />
+      <br />
+      <a href="#page2" class="a1">next page</a>
+    </section>
+
+    <section id="page2">
+      <h1>page2</h1>
+      <br />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+        possimus in sequi recusandae mollitia deleniti, commodi doloremque,
+        quidem incidunt natus aliquam minima qui nihil laborum alias,
+        accusantium id quos aspernatur.
+      </p>
+      <br />
+      <br />
+      <a href="#page1" class="a2">prev page</a>
+      <a href="#page3" class="a1">next page</a>
+    </section>
+
+    <section id="page3">
+      <h1>page3</h1>
+      <br />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+        possimus in sequi recusandae mollitia deleniti, commodi doloremque,
+        quidem incidunt natus aliquam minima qui nihil laborum alias,
+        accusantium id quos aspernatur.
+      </p>
+      <br />
+      <br />
+      <a href="#page2" class="a2">prev page</a>
+      <a href="#page4" class="a1">next page</a>
+    </section>
+
+    <section id="page4">
+      <h1>page4</h1>
+      <br />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+        possimus in sequi recusandae mollitia deleniti, commodi doloremque,
+        quidem incidunt natus aliquam minima qui nihil laborum alias,
+        accusantium id quos aspernatur.
+      </p>
+      <br />
+      <br />
+      <a href="#page3" class="a2">prev page</a>
+    </section>
+  </body>
+</html>
